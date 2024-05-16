@@ -12,7 +12,7 @@ const page = async () => {
     <div>
       {new Date().toLocaleTimeString()}
       {data.map((user) => (
-        <p key={user}>{user.name}</p>
+        <p key={crypto.randomUUID()}>{user.name}</p>
       ))}
     </div>
   );

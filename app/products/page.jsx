@@ -6,9 +6,13 @@ const Products = () => {
   return (
     <>
       <div>Products</div>
-      {ARRAY.map((number) => (
-        <Link href={`/products/${number}`}>Product {number}</Link>
-      ))}
+      <ul className="flex flex-col justify-center items-center gap-4">
+        {ARRAY.map((number) => (
+          <Link href={`/products/${number}`} replace>
+            Product {number}
+          </Link>
+        ))}
+      </ul>
     </>
   );
 };
